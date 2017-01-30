@@ -7,7 +7,7 @@ module HolderRails
       holder_options[:theme] = theme unless theme.nil?
       holder_options = holder_options.map {|e| e.join('=') }.join('&')
 
-      options = { src: '', data: { src: "holder.js/#{size}?#{holder_options}" }}
+      options = { data: { src: "holder.js/#{size}?#{holder_options}" }}
       options = options.merge(html_options)
 
       tag :img, options
